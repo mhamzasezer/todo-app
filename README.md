@@ -11,7 +11,4 @@ TODO アイテムを完了ステータスでフィルタリングします。
 
 ## 使用される技術
 
-React
-TypeScript
-Recoil
-Vitest
+React, TypeScript, Recoil, Vitest
