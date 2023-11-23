@@ -1,6 +1,4 @@
-# プロジェクトのタイトル
-
-TODO List Web Application
+# TODO List Web Application
 
 このプロジェクトは、TypeScript と React で構築されたシンプルな TODO リスト Web アプリケーションであり、状態管理には Recoil を、テストには Vite を使用します。
 
