@@ -6,11 +6,9 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.64",
+    "@types/jest": "^29.5.10",
+    "@types/node": "^20.9.4",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
     "react": "^18.2.0",
@@ -23,9 +21,25 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:watch": "react-scripts test --watchAll",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
     "eject": "react-scripts eject"
+  },
+  "vitest": {
+    "transform": [
+      [
+        "@vitest/transform-jsx",
+        {
+          "babelConfigFile": "babel.config.js"
+        }
+      ]
+    ],
+    "files": [
+      "src/**/*.test.{js,tsx,ts}"
+    ],
+    "browsers": [
+      "ChromeHeadless"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +58,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.2",
+    "vitest": "^0.34.6"
   }
 }
